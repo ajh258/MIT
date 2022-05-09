@@ -1,15 +1,23 @@
+## Software
+This code requires Julia. We are running the code in v.1.7.2
+
+
 ## Packages
 This code requires the following packages: LeastSquaresOptim, Printf, Test
 
-LeastSquaresOptim is not a default package. To install, run the following code in Julia first:
+LeastSquaresOptim is not a default package. To install, run the following code in Julia terminal first:
 ```julia
 using Pkg
 Pkg.add("LeastSquaresOptim")
 ```
 
-## Motivation
 
-This package solves non linear least squares optimization problems.   This package is written with large scale problems in mind (in particular for sparse Jacobians). 
+## File Description
+finalcode - this is the optimization code 
+.csv - this is the sparse matrix used for testing 
+
+
+
 
 
 ## Simple Syntax
@@ -76,19 +84,3 @@ function rosenbrock_g!(J, x)
 end
 optimize!(LeastSquaresProblem(x = zeros(2), f! = rosenbrock_f!, g! = rosenbrock_g!, output_length = 2), Dogleg())
 ```
-
-
-
-## Related packages
-Related:
-- [MINPACK.jl](https://github.com/sglyon/MINPACK.jl)] solves least squares problem (without boundary constraints)
-- [Optim.jl](https://github.com/JuliaOpt/Optim.jl) solves general optimization problems.
-- [NLSolve.jl](https://github.com/EconForge/NLsolve.jl) solves non linear equations by least squares minimization.
-- [LSqfit.jl](https://github.com/JuliaOpt/LsqFit.jl) fits curves (i.e. models of the form y = f(x, β))
-
-
-
-## References
-- Nocedal, Jorge and Stephen Wright *An Inexact Levenberg-Marquardt method for Large Sparse Nonlinear Least Squares*  (1985) The Journal of the Australian Mathematical Society
-- Fong, DC. and Michael Saunders. (2011) *LSMR: An Iterative Algorithm for Sparse Least-Squares Problems*.  SIAM Journal on Scientific Computing
-- Agarwal, Sameer, Keir Mierle and Others. (2010) *Ceres Solver*
