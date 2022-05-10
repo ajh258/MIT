@@ -6,7 +6,7 @@ Required Julia packages: Gflops, LeastSquaresOptim, Printf, Test
 To install Julia packages (e.g. LeastSquaresOptim) run the following code first:
 ```julia
 using Pkg
-Pkg.add("LeastSquaresOptim")
+Pkg.add("Gflops")
 ```
 
 
