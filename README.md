@@ -3,17 +3,34 @@ This code was ran in Jupyter using Julia v.1.7.2
 
 Required Julia packages: GFlops, LeastSquaresOptim, Printf, Test
 
-To install Julia packages (e.g. LeastSquaresOptim) run the following code first:
+To install Julia packages (e.g. GFlops) run the following code first:
 ```julia
-using Pkg
-Pkg.add("GFlops")
+julia> using Pkg
+julia> Pkg.add("GFlops")
 ```
 
 
 ## File Description
 finalcode - this is the optimization code 
+
 .csv - this is the sparse matrix used for testing 
 
+
+
+## GFlops Note
+
+GFlops.jl does not see what happens outside the realm of Julia code. 
+
+It does not see operations performed in external libraries such as BLAS calls: 
+
+```julia
+julia> using GFlops
+julia> using LinearAlgebra
+julia> x = rand(1000)
+1000-element Vector{Float64}:
+julia> @count_ops dot($x, $x)
+Flop Counter: 0 flop
+```
 
 
 
