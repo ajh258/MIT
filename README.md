@@ -1,11 +1,9 @@
-## Software
-This code requires Julia. We are running the code in v.1.7.2
+## Software & Packages
+This code was ran in Jupyter using Julia v.1.7.2
 
+Required Julia packages: LeastSquaresOptim, Printf, Test
 
-## Packages
-This code requires the following packages: LeastSquaresOptim, Printf, Test
-
-LeastSquaresOptim is not a default package. To install, run the following code in Julia terminal first:
+To install Julia packages (e.g. LeastSquaresOptim) run the following code first:
 ```julia
 using Pkg
 Pkg.add("LeastSquaresOptim")
