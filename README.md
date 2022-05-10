@@ -17,7 +17,7 @@ finalcode - this is the optimization code
 
 
 
-## GFlops Note
+## GFlops Counter Note
 
 GFlops.jl does not see what happens outside the realm of Julia code. 
 
@@ -25,9 +25,32 @@ It does not see operations performed in external libraries such as BLAS calls:
 
 ```julia
 julia> using GFlops
+
 julia> using LinearAlgebra
+
 julia> x = rand(1000)
 1000-element Vector{Float64}:
+ 0.5776651858964748
+ 0.6946644664794772
+ 0.3875659617393591
+ 0.3607964326251861
+ 0.878597803663574
+ 0.49578477434890644
+ 0.34572482864736054
+ 0.47060317011038777
+ 0.3907418152947162
+ 0.49669411346439796
+ ⋮
+ 0.6868543025983905
+ 0.8609730536488172
+ 0.25835857412032026
+ 0.633615787488576
+ 0.43785626016340684
+ 0.3394714234751539
+ 0.9715263132599209
+ 0.01046989353197414
+ 0.5717838360554347
+
 julia> @count_ops dot($x, $x)
 Flop Counter: 0 flop
 ```
