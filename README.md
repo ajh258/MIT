@@ -1,7 +1,11 @@
 ## Software & Packages
 This code was ran in Jupyter using Julia v.1.7.2
 
-Required Julia packages: GFlops, LeastSquaresOptim, Printf, Test
+Required Julia packages: DelimitedFiles, 
+
+
+
+LeastSquaresOptim, Printf, Test, 
 
 To install Julia packages (e.g. GFlops) run the following code first:
 ```julia
