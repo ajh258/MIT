@@ -12,4 +12,4 @@ houseprice.csv - raw data to optimize
 
 housepriceREADME.txt - self explanatory
 
-DLnorm.csv, DLSSE.csv, LMnorm.csv, LMSSE.csv, LMnorm_alt.csv, LMSSS_alt.csv - algorithm performance data
+DLnorm.csv, DLSSE.csv, LMnorm.csv, LMSSE.csv - algorithm performance data
