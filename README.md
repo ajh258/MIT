@@ -6,7 +6,7 @@ Required Julia packages: DelimitedFiles, LinearAlgebra, Printf, Base, Plots
 
 
 ## File Description
-nonlinear_solver_vf.ipynb - this is the algorithm 
+nonlinear_solver_vf.ipynb - algorithm code & plot of performance data
 
 houseprice.csv - raw data to optimize
 
